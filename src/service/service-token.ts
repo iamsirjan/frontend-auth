@@ -48,10 +48,6 @@ function clearToken() {
   localStorage.removeItem("refresh_token");
 }
 
-export const getRole = () => {
-  return getTokenDetails();
-};
-
 const getUserDetails = () => {
   const item = localStorage.getItem("userDetails");
   const response = JSON.parse(item || "") as { user: IUserResponse };
